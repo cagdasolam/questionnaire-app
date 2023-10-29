@@ -10,7 +10,7 @@ const questionSchema = new Schema({
   options:
   {
     type: Schema.Types.Map,
-    of: Schema.Types.String,
+    of: Schema.Types.Number,
   },
 }, { timestamps: true });
 
