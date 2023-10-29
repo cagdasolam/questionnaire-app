@@ -1,0 +1,154 @@
+.active {
+  background-color: #03e9fa;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: dodgerblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+/* Navigation List */
+.nav-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* Navigation List Item */
+.nav-item {
+  margin-right: 20px;
+  /* Adjust the spacing between items as needed */
+}
+
+/* Navigation Link Styling */
+.nav-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  /* Change to your desired text color */
+  font-weight: bold;
+  font-size: 1.6rem;
+  transition: color 0.3s;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+  /* Change to your desired hover color */
+}
+
+.create-account {
+  display: block;
+  text-decoration: none;
+  color: #ffcc00;
+  border: 5px solid #ffcc00;
+  font-weight: bold;
+  font-size: 1.6rem;
+  transition: color 0.3s;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Style for each questionnaire card */
+.q-card {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  width: 400px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+  /* Add this to hide overflow content */
+  transition: max-height 0.3s ease-in-out;
+}
+
+.q-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.q-card.expanded {
+  height: 500px;
+  /* Adjust this value as needed for the maximum expansion height */
+}
+
+/* Style for the title of each questionnaire */
+.q-title {
+  flex: 20%;
+  border-bottom: 1px solid lightgray;
+  background-color: dodgerblue;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* Style for the description of each questionnaire */
+.q-description {
+  flex: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 10px;
+}
+
+
+
+.limited-description {
+  margin-bottom: 10px;
+}
+
+.read-more-button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: flex;
+  /* align-self: fle; */
+}
