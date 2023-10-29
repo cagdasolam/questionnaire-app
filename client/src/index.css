@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
 }
 
 .nav-title {
@@ -52,7 +53,6 @@
 
 .nav-link:hover {
   color: #ffcc00;
-  /* Change to your desired hover color */
 }
 
 .create-account {
@@ -77,9 +77,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  height: 100vh;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+  /* flex-wrap: wrap; */
   gap: 10px;
 }
 
@@ -89,7 +89,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 400px;
+  height: auto;
   width: 400px;
   margin-bottom: 20px;
   display: flex;
@@ -97,7 +97,6 @@ body {
   align-items: center;
   padding: 0;
   overflow: hidden;
-  /* Add this to hide overflow content */
   transition: max-height 0.3s ease-in-out;
 }
 
@@ -107,13 +106,12 @@ body {
 }
 
 .q-card.expanded {
-  height: 500px;
-  /* Adjust this value as needed for the maximum expansion height */
+  height: auto;
 }
 
 /* Style for the title of each questionnaire */
 .q-title {
-  flex: 20%;
+  /* flex: 20%; */
   border-bottom: 1px solid lightgray;
   background-color: dodgerblue;
   display: grid;
@@ -135,8 +133,6 @@ body {
   padding: 10px;
 }
 
-
-
 .limited-description {
   margin-bottom: 10px;
 }
@@ -150,5 +146,110 @@ body {
   margin-top: 10px;
   border-radius: 5px;
   display: flex;
-  /* align-self: fle; */
+}
+
+/* .q-card .view-questionnaire-button {} */
+
+.q-card .view-questionnaire-button:hover {
+  background-color: #0069d9;
+}
+
+.q-card-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  flex-direction: row-reverse;
+
+}
+
+.q-card .q-description .q-card-buttons .view-questionnaire-button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+/* Styling for the Questionnaire Page */
+
+.questionnaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.questionnaire .q-questions {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  border: 1px solid red;
+  max-width: 800px;
+}
+
+.questionnaire .q-question .q-question-text {
+  background-color: dodgerblue;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.questionnaire .q-description {
+  padding: 20px;
+  font-size: 1.6rem;
+}
+
+.questionnaire .q-questions {
+  margin-top: 20px;
+}
+
+.questionnaire .q-question {
+  margin-bottom: 20px;
+}
+
+.questionnaire .q-question-text h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.questionnaire .q-question-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionnaire .q-question-options .option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.questionnaire .q-question-options .option input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Styling for radio button and label */
+.questionnaire .q-question-options .option input[type="radio"]+label {
+  font-size: 1.4rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Styling for radio button when selected */
+.questionnaire .q-question-options .option input[type="radio"]:checked+label {
+  font-weight: bold;
+  color: dodgerblue;
 }

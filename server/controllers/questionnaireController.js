@@ -16,7 +16,7 @@ const getQuestionnaireById = async (req, res) => {
         if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
             return res.status(404).json({ message: 'Questionnaire not found' });
         }
-        const questionnaire = await Questionnaire.findById(req.params.id);
+        const questionnaire = await Questionnaire.findById(req.params.id).populate('questions');
         if (!questionnaire) {
             return res.status(404).json({ message: 'Questionnaire not found' });
         }
