@@ -34,7 +34,7 @@ const QuestionnairePage = () => {
 				{questionnaire.questions && questionnaire.questions.map((question, key) => (
 					<div key={key} className="q-question">
 						<div className="q-question-text">
-							<h3>{question.text}</h3>
+							<h3>{key + 1}. {question.text}</h3>
 						</div>
 						<div className="q-question-options">
 							{question.options && question.options.map((option, optionKey) => (

@@ -183,6 +183,16 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  justify-content: space-evenly;
+}
+
+.questionnaire .container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
 }
 
 .questionnaire .q-questions {
@@ -191,14 +201,12 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 80%;
-  border: 1px solid red;
   max-width: 800px;
 }
 
 .questionnaire .q-question .q-question-text {
   background-color: dodgerblue;
   color: #fff;
-  text-align: center;
   padding: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
