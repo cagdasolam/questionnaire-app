@@ -40,13 +40,14 @@ const QuestionnairePage = () => {
 							{question.options && question.options.map((option, optionKey) => (
 								<div key={optionKey} className="option" id={optionKey}>
 									<input type="radio" id={optionKey} name={question.text} value={option.text} />
-									<label htmlFor={option.text}>{option.text}</label>
+									<label htmlFor={option.text}>
+										<span>{option.text}</span>
+									</label>
 								</div>
 							))}
 						</div>
 					</div>
 				))}
-
 			</div>
 		</div>
 	);
