@@ -38,10 +38,10 @@ const QuestionnairePage = () => {
 						</div>
 						<div className="q-question-options">
 							{question.options && question.options.map((option, optionKey) => (
-								<div key={optionKey} className="option" id={optionKey}>
+								<label key={optionKey} className="option" id={optionKey}>
 									<input type="radio" id={optionKey} name={question.text} value={option.text} />
-									<label htmlFor={option.text}>{option.text}</label>
-								</div>
+									{option.text}
+								</label>
 							))}
 						</div>
 					</div>
