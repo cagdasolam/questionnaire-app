@@ -6,8 +6,6 @@ const Login = () => {
 
 	const handleSubmit = async e => {
 		e.preventDefault();
-		// Here you would typically make a fetch/axios request to your API to log in the user
-		// For now, we'll just log the username and password
 		console.log(`Logging in with username: ${username} and password: ${password}`);
 	};
 
