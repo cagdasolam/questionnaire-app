@@ -42,7 +42,6 @@
   display: block;
   text-decoration: none;
   color: #fff;
-  /* Change to your desired text color */
   font-weight: bold;
   font-size: 1.6rem;
   transition: color 0.3s;
@@ -141,8 +140,6 @@ body {
   display: flex;
 }
 
-/* .q-card .view-questionnaire-button {} */
-
 .q-card .view-questionnaire-button:hover {
   background-color: #0069d9;
 }
@@ -169,7 +166,6 @@ body {
 }
 
 /* Styling for the Questionnaire Page */
-
 .questionnaire {
   display: flex;
   flex-direction: column;
@@ -201,14 +197,12 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 30px;
-  /* border: 1px solid blue */
 }
 
 .questionnaire .q-question {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: 1px solid green; */
   height: auto;
   gap: 20px;
 }
@@ -240,7 +234,6 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 10px;
-  /* border: 1px solid red; */
 }
 
 .questionnaire .q-question-options .option {
@@ -270,14 +263,12 @@ body {
 }
 
 /* Styling for login page */
-
 .login-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  /* background-color: #f2f2f2; */
 }
 
 .login-form {
@@ -320,7 +311,6 @@ body {
 }
 
 /* styling for about page */
-
 .about-page {
   display: flex;
   justify-content: space-between;
@@ -374,7 +364,6 @@ body {
 
 .footer {
   width: 100%;
-  /* height: 70px; */
   background-color: dodgerblue;
   display: flex;
   justify-content: space-between;
