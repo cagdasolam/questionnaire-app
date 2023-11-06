@@ -273,7 +273,8 @@ body {
 
 .login-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
   /* background-color: #f2f2f2; */
@@ -322,9 +323,10 @@ body {
 
 .about-page {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  height: auto;
+  height: 100vh;
   font-family: 'Arial', sans-serif;
 }
 
@@ -378,7 +380,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 .footer .container {
@@ -401,7 +403,7 @@ body {
 
 .footer .container .links {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   margin: 1rem;
   flex-direction: row;
