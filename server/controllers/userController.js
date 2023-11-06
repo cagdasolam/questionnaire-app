@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import User from "../models/userModel.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
 const register = async (req, res) => {
     const { username, email, password } = req.body;
@@ -13,7 +14,8 @@ const register = async (req, res) => {
     });
     try {
         const savedUser = await user.save();
-        res.send(savedUser);
+        const token = jwt.sign({ _id: savedUser._id }, process.env.TOKEN_SECRET);
+        res.header('auth-token', token).send(token);
     } catch (err) {
         res.status(400).send(err);
     }
@@ -25,8 +27,9 @@ const logIn = async (req, res) => {
 
     const validPassword = await bcrypt.compare(req.body.password, user.password);
     if (!validPassword) return res.status(400).send('Invalid password');
-
-    res.send('Logged in');
+    
+    const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
+    res.header('auth-token', token).send('Logged in');
 };
 
 export { register, logIn };

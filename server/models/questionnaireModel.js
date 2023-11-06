@@ -16,6 +16,11 @@ const questionnaireSchema = new Schema({
       ref: 'Question',
     },
   ],
+  createdBy: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  }
 }, { timestamps: true });
 
 const Questionnaire = mongoose.model('Questionnaire', questionnaireSchema);

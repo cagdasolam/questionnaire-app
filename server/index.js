@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from 'dotenv';
-import questionRouter from "./router/questions.js";
-import questionnaireRouter from "./router/questionnaires.js";
+import questionRouter from "./router/questionRouter.js";
+import questionnaireRouter from "./router/questionnaireRouter.js";
 import mongoose from "mongoose";
 
 dotenv.config();
