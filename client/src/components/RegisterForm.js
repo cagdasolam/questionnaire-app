@@ -16,11 +16,16 @@ const RegistrationForm = () => {
 				username: values.username,
 				email: values.email,
 				password: values.password,
-			});
+			},
+				{
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				});
 
-			if (res.data.success) {
+			if (res.status === 200) {
 				localStorage.setItem('token', res.data.token);
-				window.location.href = '/';
+				window.location.href = '/home';
 			} else {
 				setFieldError('password', 'Invalid username or password');
 			}

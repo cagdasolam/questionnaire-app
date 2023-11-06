@@ -2,10 +2,9 @@ import {
 	register,
 	login
 } from "../controllers/userController.js";
+import express from "express";
 
-const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
 
 
 router.post('/register', register);
