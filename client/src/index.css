@@ -85,19 +85,12 @@ body {
 
 /* Style for each questionnaire card */
 .q-card {
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
+  background: white;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: auto;
-  width: 400px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 .q-card:hover {
@@ -274,4 +267,116 @@ body {
 .questionnaire .q-question-options .option input[type="radio"]:checked+label {
   font-weight: bold;
   color: dodgerblue;
+}
+
+/* Styling for login page */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: #f2f2f2; */
+}
+
+.login-form {
+  width: 300px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+/* styling for about page */
+
+.about-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.about-card {
+  background: white;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h2 {
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-card a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.about-card a:hover {
+  color: #0056b3;
+}
+
+.about-card .faGithub,
+.about-card .faLinkedin {
+  margin-right: 5px;
+}
+
+.about-card .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* footer styling */
+
+.footer {
+  width: 100%;
+  height: 70px;
+  background-color: dodgerblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
 }
