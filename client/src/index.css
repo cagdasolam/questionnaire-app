@@ -263,7 +263,7 @@ body {
 }
 
 /* Styling for login page */
-.login-container {
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -271,7 +271,7 @@ body {
   height: 100vh;
 }
 
-.login-form {
+.form {
   width: 300px;
   background-color: white;
   padding: 30px;
@@ -279,16 +279,18 @@ body {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-.login-form h2 {
+.form h2 {
   margin-bottom: 20px;
 }
 
-.login-form label {
+.form label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
+
 }
 
-.login-form input {
+.form input {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -296,7 +298,7 @@ body {
   border: 1px solid #ccc;
 }
 
-.login-form button {
+.form button {
   width: 100%;
   padding: 10px;
   border: none;
@@ -306,8 +308,15 @@ body {
   cursor: pointer;
 }
 
-.login-form button:hover {
+.form button:hover {
   background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* styling for about page */
@@ -399,3 +408,5 @@ body {
   width: 100%;
   gap: 20px;
 }
+
+/* register styling */
