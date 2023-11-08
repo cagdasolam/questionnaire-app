@@ -23,15 +23,15 @@ const RegistrationForm = () => {
 					}
 				});
 
+			console.log(res.status);
 			if (res.status === 200) {
-				localStorage.setItem('token', res.data.token);
+				localStorage.setItem('token', res.data.token.split(' ')[1]);
 				window.location.href = '/home';
 			} else {
 				setFieldError('password', 'Invalid username or password');
 			}
 		} catch (error) {
-			console.error(error);
-			alert('An error occurred while registering');
+			setFieldError("password", error.response.data.error);
 		}
 		setSubmitting(false);
 	};

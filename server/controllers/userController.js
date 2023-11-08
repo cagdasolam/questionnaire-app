@@ -5,6 +5,19 @@ import jwt from "jsonwebtoken";
 
 const register = async (req, res) => {
 	const { username, email, password } = req.body;
+
+	const usernameExists = await User.findOne({ username });
+	if (usernameExists) {
+		console.log("usernameExists");
+		return res.status(400).json({ error: 'Username is already taken' });
+	}
+
+	// Check if email is already taken
+	const emailExists = await User.findOne({ email });
+	if (emailExists) {
+		return res.status(400).json({ error: 'Email is already taken' });
+	}
+
 	const salt = await bcrypt.genSalt(10);
 	const hashedPassword = await bcrypt.hash(password, salt);
 	const user = new User({
@@ -15,7 +28,8 @@ const register = async (req, res) => {
 	try {
 		const savedUser = await user.save();
 		const token = jwt.sign({ _id: savedUser._id }, process.env.TOKEN_SECRET, { expiresIn: '1h' });
-		res.header('auth-token', token).send(token);
+		res.setHeader('Authorization', `Bearer ${token}`);
+		res.status(200).json({ token: `Bearer ${token}` });
 	} catch (err) {
 		res.status(400).send(err);
 	}
