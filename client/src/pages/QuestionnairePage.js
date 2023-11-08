@@ -2,6 +2,8 @@ import { useEffect, useState, React } from "react";
 import { useParams } from 'react-router-dom'
 import axios from "axios";
 
+import "./styles/questionnairePage.css";
+
 const QuestionnairePage = () => {
 
 	const { id } = useParams();

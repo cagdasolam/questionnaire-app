@@ -1,0 +1,97 @@
+/* Styling for the Questionnaire Page */
+.questionnaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.questionnaire .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+.questionnaire .q-questions {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: auto;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.questionnaire .q-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    gap: 20px;
+}
+
+.questionnaire .q-question .q-question-text {
+    background-color: dodgerblue;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.questionnaire .q-description {
+    padding: 20px;
+    font-size: 1.6rem;
+}
+
+.questionnaire .q-question-text h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.questionnaire .q-question-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.questionnaire .q-question-options .option {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+/* radio buttons */
+.questionnaire .q-question-options .option input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Styling for radio button and label */
+.questionnaire .q-question-options .option input[type="radio"]+label {
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Styling for radio button when selected */
+.questionnaire .q-question-options .option input[type="radio"]:checked+label {
+    font-weight: bold;
+    color: dodgerblue;
+}

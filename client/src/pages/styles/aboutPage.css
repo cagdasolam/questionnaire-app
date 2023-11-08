@@ -1,0 +1,49 @@
+/* styling for about page */
+.about-page {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-card {
+    background: white;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h2 {
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about-card a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.about-card a:hover {
+    color: #0056b3;
+}
+
+.about-card .faGithub,
+.about-card .faLinkedin {
+    margin-right: 5px;
+}
+
+.about-card .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
