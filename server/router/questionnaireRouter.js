@@ -4,7 +4,8 @@ import {
     getQuestionnaireById,
     createQuestionnaire,
     updateQuestionnaire,
-    deleteQuestionnaire
+    deleteQuestionnaire,
+    submitAnswers
 } from "../controllers/questionnaireController.js";
 
 const router = express.Router();
@@ -15,6 +16,8 @@ router.post('/', createQuestionnaire);
 router.put('/:id', updateQuestionnaire);
 router.patch('/:id', updateQuestionnaire);
 router.delete('/:id', deleteQuestionnaire);
+
+router.post('/:id/submit', submitAnswers);
 
 export default router;
 
