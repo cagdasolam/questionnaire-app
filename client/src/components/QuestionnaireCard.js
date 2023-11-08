@@ -24,7 +24,7 @@ const QuesrtionnaireCard = ({ questionnaire }, key) => {
 			</div>
 			<div className="q-description">
 				<div className="limited-description">
-					<p>{!expandedCards[key] && questionnaire.description.length > 100
+					<div>{!expandedCards[key] && questionnaire.description.length > 100
 						? questionnaire.description.slice(0, 100) + '...'
 						: questionnaire.description
 					}
@@ -37,10 +37,8 @@ const QuesrtionnaireCard = ({ questionnaire }, key) => {
 									{expandedCards[key] ? 'See Less' : 'See More'}
 								</button>
 							)}
-
 						</div>
-
-					</p>
+					</div>
 				</div>
 
 				<p>Number of questions: {questionnaire.questions.length}</p>

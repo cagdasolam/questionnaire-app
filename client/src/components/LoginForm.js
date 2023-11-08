@@ -23,9 +23,9 @@ const LoginForm = () => {
         password: values.password,
       });
 
-      if (res.data.success) {
-        localStorage.setItem('token', res.data.token);
-        window.location.href = '/';
+      if (res.status === 200) {
+        localStorage.setItem('token', res.data.token.split(' ')[1]);
+        window.location.href = '/home';
       } else {
         setFieldError('password', 'Invalid username or password');
       }

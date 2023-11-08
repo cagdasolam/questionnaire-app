@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom";
 import "./styles/navbar.css";
 
 const Navbar = () => {
+
+  const isUserLoggedIn = !!localStorage.getItem('token');
+
+
   return (
     <nav className="navbar">
       <a href="/home" className="nav-title">Questionnare</a>
@@ -14,12 +18,16 @@ const Navbar = () => {
           <li className="nav-item" >
             <NavLink to="/about" className="nav-link">About</NavLink>
           </li>
-          <li className="nav-item" >
-            <NavLink to="/login" className="nav-link">Log in</NavLink>
-          </li>
-          <li className="nav-item" >
-            <NavLink to="/create-account" className="create-account">Create Account</NavLink>
-          </li>
+          {!isUserLoggedIn && (
+            <>
+              <li className="nav-item" >
+                <NavLink to="/login" className="nav-link">Log in</NavLink>
+              </li>
+              <li className="nav-item" >
+                <NavLink to="/create-account" className="create-account">Create Account</NavLink>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>

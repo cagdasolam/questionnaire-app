@@ -29,7 +29,10 @@ const login = async (req, res) => {
 	if (!validPassword) return res.status(400).send('Invalid password');
 
 	const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET, { expiresIn: '1h' });
-	res.header('auth-token', token).send(token);
+	res.setHeader('Authorization', `Bearer ${token}`);
+	res.status(200).json({ token: `Bearer ${token}` });
+	// console.log(res);
+	// console.log(res.header['auth-token']);
 };
 
 export { register, login };
